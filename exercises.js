@@ -199,6 +199,33 @@ Declare a variable named `topQuote` and assign it to a String value of your favo
 Write a function that will iterate through the string value and return the longest word in that quote. Console.log your result.
 */
 
+var topQuote = 'Hasta la vista, baby';
+
+function removeComma(string){
+  for( i=0; i<string.length; i++){
+  if(string[i] === ","){
+    return newString = string.replace(',','');
+  }
+}
+}
+
+var topQuote2 = removeComma(topQuote);
+console.log(topQuote2);
+
+function returnLongestWord(string){
+  var LongestWord = '';
+  newArray = string.split(' ');
+for(i=0; i<newArray.length; i++){
+if (LongestWord.length < newArray[i].length) {
+   LongestWord = newArray[i]; 
+}else if(LongestWord.length === newArray[i].length) {return LongestWord +' and '+ newArray[i] + ' are the longest words.';}
+}
+return LongestWord
+}
+console.log(returnLongestWord(topQuote2));
+
+//doop = topQuote.split(' ');
+//console.log(doop[2].length);
 
 
 /* 12) Puppet Master
