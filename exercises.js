@@ -284,6 +284,18 @@ Note, please use two for loops to complete this problem
 
 var guide = [["Honolulu", "Waikiki"], ["Tokyo", "Tsukiji Fish Market"], ["Cairo", "Pyramids"],["Rome", "Colosseum"]];
 
+function returnData(yourArrayHere){
+  console.log('This be the cities');
+  for(var i=0; i<yourArrayHere.length;i++){
+    console.log(yourArrayHere[i][0]);
+  }
+  console.log('This be the landmarks')
+  for(var i=0; i<yourArrayHere.length;i++){
+    console.log(yourArrayHere[i][1]);
+    }
+}
+
+console.log(returnData(guide));
 
 
 /* 15) Back to School
