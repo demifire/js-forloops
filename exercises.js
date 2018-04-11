@@ -224,9 +224,6 @@ return LongestWord
 }
 console.log(returnLongestWord(topQuote2));
 
-//doop = topQuote.split(' ');
-//console.log(doop[2].length);
-
 
 /* 12) Puppet Master
 Declare a variable named `miscStorage` set it's value to be: `[ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ]`
@@ -236,6 +233,17 @@ Write a function named `generateArrayOfStrings` which takes a single argument `s
    @return Datatype: Array
 
 */
+
+var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ];
+function generateArrayOfStrings(storage) {
+  var stringArray = [];
+  for (i=0; i<storage.length; i++){ 
+    if (typeof storage[i] === typeof ''){ stringArray.push(storage[i])}
+  }
+  return stringArray;
+}
+
+console.log(generateArrayOfStrings(miscStorage));
 
 
 
