@@ -297,6 +297,7 @@ function returnData(yourArrayHere){
 
 console.log(returnData(guide));
 
+//Why am I getting undefined? - HELP
 
 /* 15) Back to School
 Declare a variable named `currentCohort` and set it's value to be this [array found here](https://gist.github.com/sgnl/e40879b2249e06ca7811).
@@ -309,3 +310,63 @@ If the `enrolled` property is set to `true` then change that student's `graduate
 Console.log your result.
 */
 
+var currentCohort = [
+  {
+    name: 'Doug',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Pat',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Marsha',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Moira',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Ben',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Nigel the Giraffe',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Brandon the Shark',
+    graduated: false,
+    enrolled: true
+  }
+]
+
+function graduateAndSetNewClass(cohort) {
+
+  for (var i=0; i<cohort.length; i++){
+    if( cohort[i].enrolled === true ){
+      cohort[i].graduated = true;
+    }
+    else if ( cohort[i].enrolled === false ){
+      cohort[i].enrolled = true;
+
+    }  
+
+  } return cohort;
+}
+
+console.log(graduateAndSetNewClass(currentCohort));
+
+// So if I run this function again with the results I get from running the function once, it will eventually return everything as true
+
+// var LUL = graduateAndSetNewClass(currentCohort);
+// console.log(graduateAndSetNewClass(LUL));
+
+// What's the difference between strict equality and normal equals sign??
