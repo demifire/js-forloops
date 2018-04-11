@@ -139,6 +139,9 @@ nope
 turn
 */
 
+for( var i=6; i>-1; i--){
+  console.log(oopsArray[i]);
+}
 
 /* 9) Siesta Time
 Declare a variable named `napSchedule` and assign its value to the following array: `[false, false, true, false, true, true]`
@@ -150,7 +153,16 @@ Next, write a function named `nap`. This function takes in a single parameter: `
 Inside of this function write a for-loop that will iterate through the `napSchedule` array and console.log the message: `ZzZzZzZz` if the schedule is `true`, otherwise the it will console.log the message: `Gotta get coding!` if the schedule is `false`.
 */
 
+var napSchedule = [false, false, true, false, true, true]
 
+function nap(schedule) {
+
+  for(var i=0; i<napSchedule.length; i++){
+    //console.log(napSchedule[i]);
+    if(schedule[i] === true){console.log('ZzZzZzZz')}else{console.log('Gotta get coding!')}
+  }
+}
+(nap(napSchedule));
 
 /* 10) Copy Pasta
 Declare a variable named `valuesArray` and assign its value to be an array: `[99, 66, 829, 1941, 8, 76]`. 
